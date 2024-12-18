@@ -1,0 +1,118 @@
+/* Mengatur gaya umum untuk halaman */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Kontainer utama */
+.container {
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul utama */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Label form */
+label {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* Input dan Select */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+/* Tombol untuk menghitung */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Hasil skor MEOWS */
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: none;
+}
+
+#meowsScore {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+#scoreCategory {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#explanation {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Warna untuk kategori skor */
+.Rendah {
+    color: green;
+}
+
+.Sedang {
+    color: yellow;
+}
+
+.Tinggi {
+    color: red;
+}
+
+/* Styling untuk kategori dan penjelasan */
+#scoreCategory {
+    color: #333;
+    margin-top: 10px;
+}
+
+#explanation {
+    color: #666;
+}
+
+/* Tampilan responsif */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}

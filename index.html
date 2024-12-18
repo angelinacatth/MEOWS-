@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEOWS - Modified Early Obstetric Warning Scoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Modified Early Obstetric Warning Scoring (MEOWS)</h1>
+
+        <form id="meowsForm">
+            <!-- Frekuensi Pernafasan -->
+            <label for="respiratoryRate">Frekuensi Pernafasan (per menit):</label>
+            <input type="number" id="respiratoryRate" min="0" required><br>
+
+            <!-- Saturasi Oksigen -->
+            <label for="oxygenSaturation">Saturasi Oksigen (%):</label>
+            <input type="number" id="oxygenSaturation" min="0" required><br>
+
+            <!-- Penggunaan Oksigen (dropdown) -->
+            <label for="oxygenSupplement">Penggunaan Oksigen:</label>
+            <select id="oxygenSupplement">
+                <option value="ya">Ya</option>
+                <option value="tidak">Tidak</option>
+            </select><br>
+
+            <!-- Suhu -->
+            <label for="temperature">Suhu (°C):</label>
+            <input type="number" id="temperature" min="0" required><br>
+
+            <!-- Tekanan Darah Sistolik -->
+            <label for="systolicBP">Tekanan Darah Sistolik (mmHg):</label>
+            <input type="number" id="systolicBP" required><br>
+
+            <!-- Tekanan Darah Diastolik -->
+            <label for="diastolicBP">Tekanan Darah Diastolik (mmHg):</label>
+            <input type="number" id="diastolicBP" required><br>
+
+            <!-- Nadi -->
+            <label for="pulseRate">Nadi (per menit):</label>
+            <input type="number" id="pulseRate" min="0" required><br>
+
+            <!-- Tingkat Kesadaran (dropdown) -->
+            <label for="consciousness">Tingkat Kesadaran:</label>
+            <select id="consciousness">
+                <option value="alert">Alert</option>
+                <option value="verbal">Verbal</option>
+                <option value="pain">Pain</option>
+                <option value="unresponsive">Unresponsive</option>
+            </select><br>
+
+            <!-- Nyeri (dropdown) -->
+            <label for="pain">Nyeri:</label>
+            <select id="pain">
+                <option value="normal">Normal</option>
+                <option value="abnormal">Abnormal</option>
+            </select><br>
+
+            <!-- Pengeluaran/Lochia (dropdown) -->
+            <label for="discharge">Pengeluaran/Lochia:</label>
+            <select id="discharge">
+                <option value="normal">Normal</option>
+                <option value="abnormal">Abnormal</option>
+            </select><br>
+
+            <!-- Protein Urin (dropdown) -->
+            <label for="proteinuria">Protein Urin:</label>
+            <select id="proteinuria">
+                <option value="normal">Normal</option>
+                <option value="+">+</option>
+                <option value="++">++</option>
+            </select><br><br>
+
+            <button type="button" onclick="calculateMEOWS()">Hitung Skor MEOWS</button>
+        </form>
+
+        <div id="result" style="display:none;">
+            <h2>Skor MEOWS: <span id="meowsScore"></span></h2>
+            <p><span id="scoreCategory"></span></p>
+            <p><strong>Penjelasan:</strong> <span id="explanation"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
